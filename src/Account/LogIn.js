@@ -5,7 +5,6 @@ import { ClientCredentials } from "../Client/Client";
 import { toast } from 'react-toastify';
 
 function LogIn(){
-    const server_url = 'https://localhost:7013';
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -24,7 +23,7 @@ function LogIn(){
             id : -1
         }
 
-        axios.post(`${server_url}/api/LogIn`, account)
+        axios.post(`${process.env.REACT_APP_SERVER_URL}/api/LogIn`, account)
             .then((response) => {
                 return response.data;
             })

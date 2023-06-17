@@ -3,7 +3,6 @@ import { toast } from 'react-toastify';
 import axios from 'axios';
 
 function CreateAccount(){
-    const server_url = 'https://localhost:7013';
     
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -17,7 +16,7 @@ function CreateAccount(){
             password: password
         };
 
-        axios.post(`${server_url}/api/CreateAccount`, account)
+        axios.post(`${process.env.REACT_APP_SERVER_URL}/api/CreateAccount`, account)
             .then((response) => {
                 return response.data;
             })

@@ -7,7 +7,6 @@ import { ClientTasks } from "../Client/Client";
 import { InitialState } from "../DragAndDropUI/InitialState";
 
 const GetTasks = () => {
-  const server_url = 'https://localhost:7013';
 
   const clientTasks = useContext(ClientTasks);
   const initialState = useContext(InitialState);
@@ -15,7 +14,7 @@ const GetTasks = () => {
   const storedToken = JSON.parse(localStorage.getItem('Token'));
 
   useEffect( () => {
-    axios.get(`${server_url}/api/ManageTask/${clientCrdt.id}`, {
+    axios.get(`${process.env.REACT_APP_SERVER_URL}/api/ManageTask/${clientCrdt.id}`, {
       headers: {
       'Authorization': `Bearer ${storedToken}`,
       'Content-Type': 'application/json'

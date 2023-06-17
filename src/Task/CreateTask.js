@@ -3,7 +3,6 @@ import { toast } from 'react-toastify';
 import axios from 'axios';
 
 function CreateTask() {
-  const server_url = 'https://localhost:7013';
 
   const [name, setName] = useState('');
   const [type, setType] = useState('S1');
@@ -19,7 +18,7 @@ function CreateTask() {
       clientId : `${clientCrd.id}`
     };
 
-    axios.post(`${server_url}/api/ManageTask/${clientCrd.id}`, task, {
+    axios.post(`${process.env.REACT_APP_SERVER_URL}/api/ManageTask/${clientCrd.id}`, task, {
       headers: {
       'Authorization': `Bearer ${savedToken}`,
       'Content-Type': 'application/json'
