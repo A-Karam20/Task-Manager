@@ -69,7 +69,7 @@ const GetTasks = () => {
 
   const handleDelete = (name) => {
     console.log(storedToken);
-  axios.delete(`${server_url}/api/ManageTask/${clientCrdt.id}/${name}`, {
+  axios.delete(`${process.env.REACT_APP_SERVER_URL}/api/ManageTask/${clientCrdt.id}/${name}`, {
     headers: {
     Authorization : `Bearer ${storedToken}`,
   }})
@@ -145,7 +145,7 @@ const GetTasks = () => {
         clientId : clientCrdt.id
       };
 
-      axios.patch(`${server_url}/api/ManageTask/${clientCrdt.id}`, patchTask, {
+      axios.patch(`${process.env.REACT_APP_SERVER_URL}/api/ManageTask/${clientCrdt.id}`, patchTask, {
         headers: {
         Authorization : `Bearer ${storedToken}`,
       }})
