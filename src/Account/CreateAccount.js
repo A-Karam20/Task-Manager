@@ -8,7 +8,7 @@ function CreateAccount(){
     const [password, setPassword] = useState("");
 
     function handleClick(sender){
-        if(username == "" || password == "") return toast.warning("Please fill in all the required fields.");
+        if(username === "" || password === "") return toast.warning("Please fill in all the required fields.");
 
         sender.preventDefault();
         const account = {
