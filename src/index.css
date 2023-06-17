@@ -1,4 +1,5 @@
 body {
+  background-color: bisque;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -11,3 +12,82 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.Home-Bar{
+  font-size: large;
+  background-color:blanchedalmond;
+  color:deeppink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+}
+
+.Home-Bar h1{
+  margin-left: 25px;
+}
+
+.Home-Bar a{
+  text-decoration: none;
+  color: deeppink;
+}
+
+.Home-Links{
+  box-shadow: 1px 3px 5px deeppink;
+  font-size:x-large;
+  display: flex;
+  gap: 25px;
+  margin-right: 35px;
+  padding: 5px;
+}
+
+.LogIn{
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-top : 100px;
+}
+
+.LogIn label{
+  margin-right: 25px;
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+.LogIn input{
+  border-color: deeppink;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.LogIn button{
+  background-color: #fff;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-radius: 10px;
+  margin-left: 155px;
+  margin-top: 10px;
+}
+
+.LogIn button:hover{
+  transform: scale(1.1);
+  border-color: deeppink;
+  box-shadow: 0 0 10px deeppink;
+}
+
+.Password Label{
+  margin-right: 30px;
+}
+
+.ErrorPop{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 105px;
+  font-size: small;
+  color: red;
+}
+
+/* justify-content: space-between; --> allows for evenly distributing space between the components*/
