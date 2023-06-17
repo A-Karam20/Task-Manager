@@ -15,7 +15,7 @@ function LogIn(){
 
     function handleClick(event){
       event.preventDefault();
-      if(username == "" || password == "") return toast.warning("Please fill in all the required fields.");
+      if(username === "" || password === "") return toast.warning("Please fill in all the required fields.");
 
         const account = {
             username: username,
