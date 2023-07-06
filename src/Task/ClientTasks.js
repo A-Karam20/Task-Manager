@@ -174,7 +174,6 @@ const GetTasks = () => {
         },
       };
 
-      // Set the background color of the start column to a light red color
       const updatedStartColumn = {
         ...newState.columns[source.droppableId],
         isTakenFrom: true,
