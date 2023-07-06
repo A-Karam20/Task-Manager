@@ -16,7 +16,7 @@ function CreateAccount(){
             password: password
         };
 
-        axios.post(`https://managingtask.azurewebsites.net/api/CreateAccount`, account)
+        axios.post(`${process.env.REACT_APP_API_KEY}/api/CreateAccount`, account)
             .then((response) => {
                 return response.data;
             })

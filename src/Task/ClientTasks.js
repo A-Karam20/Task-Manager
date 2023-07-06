@@ -14,7 +14,7 @@ const GetTasks = () => {
   const storedToken = JSON.parse(localStorage.getItem('Token'));
 
   useEffect( () => {
-    axios.get(`https://managingtask.azurewebsites.net/api/ManageTask/${clientCrdt.id}`, {
+    axios.get(`${process.env.REACT_APP_API_KEY}/api/ManageTask/${clientCrdt.id}`, {
       headers: {
       'Authorization': `Bearer ${storedToken}`,
       'Content-Type': 'application/json'
@@ -69,7 +69,7 @@ const GetTasks = () => {
 
   const handleDelete = (name) => {
     console.log(storedToken);
-  axios.delete(`https://managingtask.azurewebsites.net/api/ManageTask/${clientCrdt.id}/${name}`, {
+  axios.delete(`${process.env.REACT_APP_API_KEY}/api/ManageTask/${clientCrdt.id}/${name}`, {
     headers: {
     Authorization : `Bearer ${storedToken}`,
   }})
@@ -145,7 +145,7 @@ const GetTasks = () => {
         clientId : clientCrdt.id
       };
 
-      axios.patch(`https://managingtask.azurewebsites.net/api/ManageTask/${clientCrdt.id}`, patchTask, {
+      axios.patch(`${process.env.REACT_APP_API_KEY}/api/ManageTask/${clientCrdt.id}`, patchTask, {
         headers: {
         Authorization : `Bearer ${storedToken}`,
       }})

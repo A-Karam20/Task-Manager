@@ -18,7 +18,7 @@ function CreateTask() {
       clientId : `${clientCrd.id}`
     };
 
-    axios.post(`https://managingtask.azurewebsites.net/api/ManageTask/${clientCrd.id}`, task, {
+    axios.post(`${process.env.REACT_APP_API_KEY}/api/ManageTask/${clientCrd.id}`, task, {
       headers: {
       'Authorization': `Bearer ${savedToken}`,
       'Content-Type': 'application/json'

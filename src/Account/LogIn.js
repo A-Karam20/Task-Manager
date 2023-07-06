@@ -23,7 +23,7 @@ function LogIn(){
             id : -1
         }
 
-        axios.post(`https://managingtask.azurewebsites.net/api/LogIn`, account)
+        axios.post(`${process.env.REACT_APP_API_KEY}/api/LogIn`, account)
             .then((response) => {
                 return response.data;
             })
